@@ -1,0 +1,541 @@
+/* Start Desktop */
+  
+  #aboutme {
+    transition: transform 400ms ease-in;
+    color: white;
+    height: 100%;
+    background-color: red;
+  
+    position: absolute;
+    top: 0;
+    right: 76%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #aboutme.slideIn {
+    transform: translateX(0);
+  }
+  
+  #aboutme.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  #aboutmePic {
+    /*background-color: aqua;*/
+    background-image: url(deadpool.jpg);
+    background-size: cover;
+    transition: transform 400ms ease-in;
+    position: absolute;
+    height: 100%;
+    width: 76%;
+    right: 0;
+  }
+  
+  #aboutmePic.slideIn {
+    transform: translateX(0%);
+  }
+  
+  #aboutmePic.slideOut {
+    transform: translateX(100%);
+  }
+  
+  #services {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 50%;
+    height: 100%;
+    background-color: #FFC000;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #services.slideIn {
+    transform: translateX(100%);
+  }
+  
+  #services.slideOut {
+    transform: translateX(200%);
+  }
+  
+  #portfolio {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 50%;
+    height: 100%;
+    background-color: green;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #portfolio.slideIn {
+    transform: translateX(0);
+  }
+  
+  #portfolio.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  #contact {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 50%;
+    height: 100%;
+    background-color: grey;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #contact.slideIn {
+    transform: translateX(100%);
+  }
+  
+  #contact.slideOut {
+    transform: translateX(200%);
+  }
+  
+  #homepage {
+    transition: transform 400ms ease-in;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 70px;
+    bottom: 70px;
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  #homepage.slideRightLg {
+    transform: translateX(50%);
+  }
+  
+  #homepage.slideRightSm {
+    transform: translateX(15%);
+  }
+  
+  #homepage.slideLeft {
+    transform: translateX(0);
+  }
+  /* End Desktop */
+  
+  /* Start Mobile */
+  
+  #aboutmeContainerMobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 400ms ease-in;
+  }
+  
+  #aboutmeContainerMobile.slideIn {
+    transform: translateX(0);
+  }
+  
+  #aboutmeContainerMobile.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  #aboutmeMobile {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #aboutmeMobile.slideIn {
+    transform: translateX(0);
+  }
+  
+  #aboutmeMobile.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  #servicesMobile {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: #FFC000;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #servicesMobile.slideIn {
+    transform: translateX(0);
+  }
+  
+  #servicesMobile.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  #portfolioMobile {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #portfolioMobile.slideIn {
+    transform: translateX(0);
+  }
+  
+  #portfolioMobile.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  #contactMobile {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #contactMobile.slideIn {
+    transform: translateX(0);
+  }
+  
+  #contactMobile.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  
+  #homepageMobile {
+    transition: transform 400ms ease-in;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    overflow: hidden;
+  }
+  
+  #homepageMobile.slideRight {
+    transform: translateX(100%);
+  }
+  
+  #homepageMobile.slideLeft {
+    transform: translateX(0);
+  }
+  
+  #homepageMobile #nameBox {
+    width: calc(100% - 3px);
+  }
+  
+  #portfolioMobile #portfolioContents.row {
+    padding-bottom: 1rem;
+  }
+  /* End Mobile */
+  
+  
+  
+  /* --------Global------------- */
+  
+  #root {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    font-family: Arial;
+  }
+  
+  #App {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*background: url(02.jpg);*/
+    background-color:black;
+    background-size: cover;
+  }
+  
+  #bgStill {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(02.jpg);
+    background-size: cover;
+  }
+  
+  #aboutmeContents {
+    padding: 2rem 1rem 2rem 1rem;
+    height: 100%;
+  }
+  
+  #aboutmeContents h2 {
+    text-align: center;
+  }
+  
+  #aboutmeCloseButton {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    z-index: 2;
+  }
+  
+  #servicesContents {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  
+  #servicesContents h2 {
+    text-align: center;
+  }
+  
+  #servicesCloseButton {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    z-index: 2;
+  }
+  
+  #portfolioContents {
+    padding: 2rem 1rem 2rem 1rem;
+    height: 100%;
+  }
+  
+  #portfolioContents.container {
+    height: 95%;
+  }
+  
+  #portfolioContents h2 {
+    text-align: center;
+  }
+  
+  #portfolioCloseButton {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    z-index: 2;
+  }
+  
+  #contactContents {
+    padding: 2rem 1rem 2rem 1rem;
+    text-align: center;
+    display: grid;
+  }
+  
+  #contactContents textarea {
+    width: 100%;
+    height: 200px;
+  }
+  
+  #contactCloseButton {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    z-index: 2;
+  }
+  
+  #homepageContainer {
+    height: 100%;
+  }
+  
+  #homepageContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 400ms ease-in;
+  }
+  
+  #homepageContainer.slideRightLg {
+    transform: translateX(50%);
+  }
+  
+  #homepageContainer.slideRightSm {
+    transform: translateX(24%);
+  }
+  
+  #homepageContainer.slideRightXSm {
+    transform: translateX(14%);
+  }
+  
+  #homepageContainer.slideLeft {
+    transform:translateX(0%);
+  }
+  
+  #nameBox {
+    background-color: #FFC000;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 44px;
+    padding: 40px 20px 40px 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: 'Dosis';
+    width: 296px;
+    bottom: 2px;
+    left: 2px;
+  }
+  
+  #nameBox.blinkingBorder {
+    outline: 2px solid red;
+  }
+  
+  #navmenu {
+    transition: transform 400ms ease-in;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: 'Dosis';
+  }
+  
+  #navmenu.slideDown {
+    transform: translateY(0);
+  }
+  
+  #navmenu.slideUp {
+    transform: translateY(-100%);
+  }
+  
+  #navmenu ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+  }
+  
+  #navmenu li {
+    text-align: left;
+    padding-bottom: 0.25rem;
+  }
+  
+  #navmenu div {
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 2px solid #FFC000;
+  }
+  
+  #navmenuClose {
+    display: inline-block;
+    border: 2px solid #FFC000;
+  }
+  
+  #portfolioContents .react-player {
+    margin: 1.5rem auto 0 auto;
+  }
+  
+  .react-player div {
+    background-color: inherit !important;
+  }
+  
+  .scrollable {
+    overflow-y: scroll;
+  }
+  
+  #blinking {
+    display:none;
+  }
+  
+  #portfolioContents .container .row {
+    padding-bottom: 1.5rem;
+  }
+  
+  #pfilter {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  button.active {
+    background-color: #FFC000 !important;
+  }
+  
+  #navmenuSidebar {
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: 'Dosis';
+    /*position: absolute;
+    bottom: 1rem;*/
+    margin-bottom: 1rem;
+  }
+  
+  #navmenuSidebar ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 0;
+  
+  }
+  
+  #navmenuSidebar li {
+    text-align: left;
+    padding-bottom: 0.25rem;
+    display: inline-block;
+  }
+  
+  #navmenuSidebar div {
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 2px solid #FFC000;
+  }
+  
+  #contactIcons {
+    font-size: 35px;
+    list-style: none;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+  
+  }
+  
+  #contactIcons a {
+    padding: 6px;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    width: 20%;
+  }

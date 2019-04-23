@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="App.css"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>React App</title>
+  </head>
+  <body>
+    
+    <div class="" id="root">
+        <div id="App">
+            <div id="homepageContainer" class="slideLeft">
+                <div style="width: 100%; height: 100%;" class="react-player">
+                    <!--iframe src="https://player.vimeo.com/video/255828084?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0&controls=0&muted=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe-->
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/255828084?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0&controls=0&muted=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div id="homepage" class="slideLeft">
+                    <div id="navmenu" class="slideUp">
+                        <ul>
+                            <li><div id="aboutmeNavBar" onclick="aboutmeOpen();">About Me</div></li>
+                            <li><div id="servicesNavBar" onclick="servicesOpen();">Services</div></li>
+                            <li><div id="portfolioNavBar" onclick="portfolioOpen();">Portfolio</div></li>
+                        </ul>
+                    </div>
+                    <div id="nameBox" class="">C. Brent Mooney</div>
+                    <div id="blinking">true</div>
+                </div>
+            </div>
+
+            <div id="aboutme" class="slideOut">
+                <div id="aboutmeCloseButton" onclick="whichClose('aboutme');">X</div>
+                <div id="aboutmeContents">
+                    <h2>About Me</h2>
+                    <p>Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!</p>
+                    <div id="contactIcons">
+                        <a href="//linkedin.com/in/c-brent-mooney-41400064" target="_blank" rel="nofollow"><i class="fab fa-linkedin"></i></a>
+                        <a href="//vimeo.com/cbrentmooney" target="_blank" rel="nofollow"><i class="fab fa-vimeo"></i></a>
+                        <a href="mailto:manningha@gmail.com" target="_blank" rel="nofollow"><i class="far fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div id="aboutmePic" class="slideOut"></div>
+
+            <div id="services" class="slideOut">
+                <div id="servicesCloseButton" onclick="whichClose('services');">X</div>
+                <div id="servicesContents">
+                    <h2>Services</h2>
+                    <p>Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!</p>
+                </div>
+            </div>
+
+            <div id="portfolio" class="slideOut">
+                <div id="portfolioCloseButton" onclick="whichClose('portfolio');">X</div>
+                <div id="portfolioContents" class="scrollable">
+                    <h2>Portfolio</h2>
+                    <div id="pfilter">
+                        <button type="button" class="active btn btn-dark" id="filterAll" onclick="filter('all');">All</button>
+                        <button type="button" class="btn btn-dark" id="filterComm" onclick="filter('comm');">Commercial</button>
+                        <button type="button" class="btn btn-dark" id="filterShort" onclick="filter('short');">Short Film</button>
+                        <button type="button" class="btn btn-dark" id="filterPhoto" onclick="filter('photo');">Photography</button>
+                    </div>
+                    <div style="width: 100%; height: 58%;" class="react-player comm">
+                        <div style="width: 100%; height: 100%; overflow: hidden; background-color: black;" data-vimeo-initialized="true">
+                            <iframe src="https://player.vimeo.com/video/67325367?title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autopause=0&amp;app_id=122963" 
+                            title="Super Sync Sports" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true" 
+                            style="width: 100%; height: 100%;" width="640" height="360" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div style="width: 100%; height: 58%;" class="react-player short">
+                        <div style="width: 100%; height: 100%; overflow: hidden; background-color: black;" data-vimeo-initialized="true">
+                            <iframe src="https://player.vimeo.com/video/67907078?title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autopause=0&amp;app_id=122963" 
+                            title="SNY - More Sports" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true" 
+                            style="width: 100%; height: 100%;" width="480" height="270" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div style="width: 100%; height: 58%;" class="react-player photo">
+                        <div style="width: 100%; height: 100%; overflow: hidden; background-color: black;" data-vimeo-initialized="true">
+                            <iframe src="https://player.vimeo.com/video/120757161?title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autopause=0&amp;app_id=122963" 
+                            title="McDonald's Sports" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true" 
+                            style="width: 100%; height: 100%;" width="480" height="270" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div style="width: 100%; height: 58%;" class="react-player comm">
+                        <div style="width: 100%; height: 100%; overflow: hidden; background-color: black;" data-vimeo-initialized="true">
+                            <iframe src="https://player.vimeo.com/video/214726261?title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autopause=0&amp;app_id=122963" 
+                            title="SPORTS" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true" 
+                            style="width: 100%; height: 100%;" width="492" height="360" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div style="width: 100%; height: 58%;" class="react-player short">
+                        <div style="width: 100%; height: 100%; overflow: hidden; background-color: black;" data-vimeo-initialized="true">
+                            <iframe src="https://player.vimeo.com/video/120757161?title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autopause=0&amp;app_id=122963" 
+                            title="McDonald's Sports" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true" 
+                            style="width: 100%; height: 100%;" width="480" height="270" frameborder="0">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div style="width: 100%; height: 58%;" class="react-player photo">
+                        <div style="width: 100%; height: 100%; overflow: hidden; background-color: black;" data-vimeo-initialized="true">
+                            <iframe src="https://player.vimeo.com/video/214726261?title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autopause=0&amp;app_id=122963" 
+                            title="SPORTS" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true" 
+                            style="width: 100%; height: 100%;" width="492" height="360" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src='index.js'></script>
+  </body>
+</html>
