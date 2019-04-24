@@ -1,24 +1,23 @@
-setInterval(function() {
-
-    var elem = document.getElementById('nameBox');
-    var blinking = document.getElementById('blinking').innerHTML;
-    if(typeof elem !== 'undefined' && elem !== null && blinking === 'true') {
-        elem.classList.toggle('blinkingBorder');
-    } else {
-        elem.style.outline = 0;
-    }
-
-}, 1000);
-
-var domReady = function(callback) {
-    document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
-};
-
-domReady(function() {//vp-controls-wrapper
-    //document.getElementById('homeVid').getElementsByClassName('vp-controls-wrapper').style.display = 'none';
-    //document.getElementsByClassName('vp-controls-wrapper').style.display = 'none';
+var blinking = document.getElementById('blinking').innerHTML;
+document.getElementById("nameBoxFade").animate([
+        // keyframes
+        { opacity: 1 }, 
+        { opacity: 0.5 }
+    ], { 
+        // timing options
+        duration: 2000,
+        iterations: Infinity
 });
 
+var nameBoxFade = document.getElementById('nameBoxFade');
+var navmenu = document.getElementById('navmenu');
+if(typeof nameBoxFade !== 'undefined' && nameBoxFade !== null && typeof navmenu !== 'undefined' && navmenu !== null) {
+    nameBoxFade.onclick = function(){
+        nameBoxFade.remove();
+        nameBox.style.display = "block";
+        navmenu.classList.replace('slideUp','slideDown');
+    };
+}
 
 var nameBox = document.getElementById('nameBox');
 var navmenu = document.getElementById('navmenu');
@@ -32,6 +31,8 @@ function whichClose(which){
     document.getElementById(which).classList.replace('slideIn','slideOut');
     document.getElementById('aboutmePic').classList.replace('slideIn','slideOut');
     document.getElementById('homepageContainer').classList.replace('slideRightLg','slideLeft');
+    document.getElementById('homepageContainer').classList.replace('slideRightSm','slideLeft');
+    document.getElementById('homepageContainer').classList.replace('slideRightXSm','slideLeft');
 }
 
 function aboutmeOpen(){
@@ -43,15 +44,22 @@ function aboutmeOpen(){
 
 function servicesOpen(){
     document.getElementById('aboutme').classList.replace('slideIn','slideOut');
+    document.getElementById('aboutmePic').classList.replace('slideIn','slideOut');
     document.getElementById('services').classList.replace('slideOut','slideIn');
     document.getElementById('portfolio').classList.replace('slideIn','slideOut');
+    document.getElementById('homepageContainer').classList.replace('slideleft','slideRightXSm');
+    document.getElementById('homepageContainer').classList.replace('slideRightLg','slideRightXSm');
+    document.getElementById('homepageContainer').classList.replace('slideRightSm','slideRightXSm');
 }
 
 function portfolioOpen(){
     document.getElementById('aboutme').classList.replace('slideIn','slideOut');
+    document.getElementById('aboutmePic').classList.replace('slideIn','slideOut');
     document.getElementById('services').classList.replace('slideIn','slideOut');
     document.getElementById('portfolio').classList.replace('slideOut','slideIn');
     document.getElementById('homepageContainer').classList.replace('slideLeft','slideRightLg');
+    document.getElementById('homepageContainer').classList.replace('slideRightSm','slideRightLg');
+    document.getElementById('homepageContainer').classList.replace('slideRightXSm','slideRightLg');
 }
 
 function filter(which){
