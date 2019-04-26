@@ -2,7 +2,7 @@ var blinking = document.getElementById('blinking').innerHTML;
 document.getElementById("nameBoxFade").animate([
         // keyframes
         { opacity: 1 }, 
-        { opacity: 0.5 }
+        { opacity: 0.25 }
     ], { 
         // timing options
         duration: 2000,
@@ -200,22 +200,27 @@ function filter(which){
     }
 }
 
-/*function showEmailModal(){
-    alert('show email modal');
+function showEmailModal(){
     document.getElementById('emailModal').style.display = "block";
     document.getElementById('App').style.opacity = 0.25;
 }
 
-var box = document.querySelector("#emailModal");
-// Detect all clicks on the document
-document.addEventListener("click", function(event) {
-	// If user clicks inside the element, do nothing
-	if (event.target.closest("#emailModal")) return;
-    // If user clicks outside the element, hide it!
-    alert("before if");
-    if(box.style.display === "block"){
-        alert("inside if");
-        box.style.display = "none";
-        document.getElementById('App').style.opacity = 1;
+function closeEmailModal(){
+    document.getElementById('emailModal').style.display = "none";
+    document.getElementById('App').style.opacity = 1;
+}
+
+function emailMessage(){
+    var email = document.getElementById('emailAddress').innerHTML;
+    var message = document.getElementById('emailMessage').innerHTML;
+    var ajax = new XMLHttpRequest();
+    ajax.open("POST", 'email.php', true);
+    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    ajax.onreadystatechange = function() { // Call a function when the state changes.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            // Request finished. Do processing here.
+            alert("here");
+        }
     }
-});*/
+    ajax.send("email=test&message=testing message");
+}

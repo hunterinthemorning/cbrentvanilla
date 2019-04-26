@@ -169,7 +169,7 @@
   overflow-y: scroll;
 }
 
-#blinking {
+#blinking, #emailModalOpen {
   display:none;
 }
 
@@ -266,12 +266,48 @@ button.active {
   z-index: 2;
 }
 
-#emailModal {
+/*#emailModal {
   position: absolute;
   z-index: 1000;
   background-color: white;
   display: none;
 }
+
+.modalHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 90%;
+}
+
+.modalTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.modalClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.modalClose i {
+  cursor: pointer;
+}
+
+.modalBody {
+  position: absolute;
+  top: 10%;
+  display: inline-grid;
+  width: 90%;
+  margin-left: 5%;
+}*/
 /* End Global */
 
 
@@ -906,12 +942,12 @@ and (min-width : 1224px) {
     width: 300px;
   }
 
-  #emailModal {  
+  /*#emailModal {  
     left: 30%;
     right: 30%;
     top: 20%;
     bottom: 20%;
-  }
+  }*/
   
 }/* End Desktop */
 
