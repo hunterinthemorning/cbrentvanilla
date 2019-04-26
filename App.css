@@ -93,7 +93,7 @@
   cursor: pointer;
   overflow: hidden;
   font-size: 44px;
-  padding: 40px 20px 40px 20px;
+  padding: 20px 12px;
   text-transform: uppercase;
   line-height: 1;
   font-family: 'Dosis';
@@ -137,12 +137,13 @@
 }
 
 #navmenu.slideUp {
-  transform: translateY(-100%);
+  transform: translateY(-120%);
 }
 
 #navmenu ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: inline-block;
 }
 
@@ -164,14 +165,6 @@
   border: 2px solid #FFC000;
 }
 
-#portfolioContents .react-player {
-  margin: 1.5rem auto 0 auto;
-}
-
-.react-player div {
-  background-color: inherit !important;
-}
-
 .scrollable {
   overflow-y: scroll;
 }
@@ -187,6 +180,14 @@
 #pfilter {
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+.media iframe {
+  height: 188px;
+}
+
+.desc {
+  text-align: center;
 }
 
 button.active {
@@ -238,7 +239,7 @@ button.active {
   border-radius: 50%;
   color: #fff;
   display: inline-block;
-  width: 20%;
+  margin-left: 5%;
 }
 
 #bgPlayer {
@@ -247,6 +248,11 @@ button.active {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+#bgIframe {
+  padding:56.25% 0 0 0;
+  position:relative;
 }
 
 .closeButton {
@@ -258,6 +264,13 @@ button.active {
   background-color: black;
   color: white;
   z-index: 2;
+}
+
+#emailModal {
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  display: none;
 }
 /* End Global */
 
@@ -318,10 +331,10 @@ and (max-device-width : 480px) {
   #portfolio {
     transition: transform 400ms ease-in;
     
-    color: white;
+    color: black;
     width: 100%;
     height: 100%;
-    background-color: green;
+    background-color: white;
   
     position: absolute;
     z-index: 1;
@@ -333,6 +346,10 @@ and (max-device-width : 480px) {
   
   #portfolio.slideOut {
     transform: translateX(-100%);
+  }
+
+  #portfolioContents button {
+    margin-top: 0.5rem;
   }
   
   #contact {
@@ -358,11 +375,15 @@ and (max-device-width : 480px) {
   #homepage {
     transition: transform 400ms ease-in;
     position: absolute;
-    top: 5%;
+    top: 2%;
     right: 5%;
-    bottom: 5%;
+    bottom: 3%;
     left: 5%;
     overflow: hidden;
+  }
+
+  #bgIframe {
+    margin-top: 56.25%;
   }
   
   #homepage #nameBox,#nameBoxFade {
@@ -372,21 +393,98 @@ and (max-device-width : 480px) {
   #portfolio #portfolioContents.row {
     padding-bottom: 1rem;
   }
-
-  #bgIframe {
-    margin-top: 56.25%;
-  }
 }
 
-/* Smartphones (landscape) ----------- 
+/* Smartphones (landscape) ----------- */
 @media only screen 
-and (min-width : 321px) {
-}*/
+and (min-width : 376px)
+and (orientation : landscape) {
+  #homepage {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 2%;
+  }
+
+  #nameBox, #nameBoxFade {
+    font-size: 30px;
+    width: inherit;
+  }
+
+  #aboutme {
+    transition: transform 400ms ease-in;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: white;
+    background-color: red;
+  }
+
+  #aboutme.slideIn {
+    transform: translateX(0);
+  }
+  
+  #aboutme.slideOut {
+    transform: translateX(-100%);
+  }
+
+  #services {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: #FFC000;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #services.slideIn {
+    transform: translateX(0);
+  }
+  
+  #services.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  #portfolio {
+    transition: transform 400ms ease-in;
+    
+    color: black;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #portfolio.slideIn {
+    transform: translateX(0);
+  }
+  
+  #portfolio.slideOut {
+    transform: translateX(-100%);
+  }
+
+  .comm, .short, .photo {
+    width: 48%;
+    display: inline-block;
+  }
+}
 
 /* Smartphones (portrait) -----------
 @media only screen 
 and (max-width : 320px) {
-  
+}*/
+
+/* Smartphones (portrait) -----------
+@media only screen 
+and (max-width : 375px) {
 }*/
 
 /* iPads (portrait and landscape) ----------- */
@@ -398,7 +496,7 @@ and (max-device-width : 1024px) {
     position: absolute;
     left: 10%;
     right: 10%;
-    top: 83%;
+    top: 80%;
     bottom: 4%;
     overflow: hidden;
   }
@@ -406,6 +504,10 @@ and (max-device-width : 1024px) {
   #navmenu {
     position: absolute;
     right: 0;
+  }
+
+  #nameBox, #nameBoxFade {
+    padding: 40px 20px;
   }
   
   #aboutme {
@@ -473,8 +575,8 @@ and (max-device-width : 1024px) {
   #portfolio {
     transition: transform 400ms ease-in;
     
-    color: white;
-    background-color: green;
+    color: black;
+    background-color: white;
   
     position: absolute;
     top: 0;
@@ -491,6 +593,12 @@ and (max-device-width : 1024px) {
   #portfolio.slideOut {
     transform: translateX(-100%);
   }
+
+  .comm, .short, .photo {
+    width: 48%;
+    display: inline-block;
+  }
+
   #homepageContainer.slideRightLg {
     transform: translateX(0%);
   }
@@ -508,35 +616,21 @@ and (max-device-width : 1024px) {
   }
 }
 
-/* iPads (landscape) ----------- 
+/* iPads (landscape) ----------- */
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
-}*/
-
-/* iPads (portrait) ----------- 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-}*/
-
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-  /* Start Desktop */
   #aboutme {
     transition: transform 400ms ease-in;
     color: white;
-    height: 100%;
     background-color: red;
   
     position: absolute;
     top: 0;
-    right: 76%;
-    bottom: 0;
-    left: 0;
+    right: 0;
+    bottom: 60%;
+    left: 40%;
     z-index: 1;
   }
   
@@ -545,7 +639,7 @@ and (min-width : 1224px) {
   }
   
   #aboutme.slideOut {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   
   #aboutmePic {
@@ -553,9 +647,10 @@ and (min-width : 1224px) {
     background-size: cover;
     transition: transform 400ms ease-in;
     position: absolute;
-    height: 100%;
-    width: 76%;
     right: 0;
+    left: 40%;
+    top: 40%;
+    bottom: 0;
   }
   
   #aboutmePic.slideIn {
@@ -589,10 +684,10 @@ and (min-width : 1224px) {
   #portfolio {
     transition: transform 400ms ease-in;
     
-    color: white;
+    color: black;
     width: 50%;
     height: 100%;
-    background-color: green;
+    background-color: white;
   
     position: absolute;
     z-index: 1;
@@ -604,6 +699,164 @@ and (min-width : 1224px) {
   
   #portfolio.slideOut {
     transform: translateX(-100%);
+  }
+  
+  #contact {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 50%;
+    height: 100%;
+    background-color: grey;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #contact.slideIn {
+    transform: translateX(100%);
+  }
+  
+  #contact.slideOut {
+    transform: translateX(200%);
+  }
+
+  #homepageContainer.slideRightLg {
+    transform: translateX(50%);
+  }
+  
+  #homepageContainer.slideRightSm {
+    transform: translateX(24%);
+  }
+  
+  #homepageContainer.slideRightXSm {
+    transform: translateX(0%);
+  }
+  
+  #homepageContainer.slideLeft {
+    transform:translateX(0%);
+  }
+  
+  #homepage {
+    transition: transform 400ms ease-in;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 2%;
+    overflow: hidden;
+    width: 180px;
+  }
+
+  #navmenu {
+    position: absolute;
+    left: 0;
+  }
+
+  #navmenu ul {
+    width: 180px;
+  }
+
+  #nameBox {
+    width: 180px;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  /* Start Desktop */
+  #aboutme {
+    transition: transform 400ms ease-in;
+    color: white;
+    height: 100%;
+    background-color: red;
+  
+    position: absolute;
+    top: 0;
+    right: 76%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #aboutme.slideIn {
+    transform: translateX(0);
+  }
+  
+  #aboutme.slideOut {
+    transform: translateX(-100%);
+  }
+  
+  #aboutmePic {
+    background-image: url(deadpool.jpg);
+    background-size: cover;
+    transition: transform 400ms ease-in;
+    position: absolute;
+    left: 24%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #aboutmePic.slideIn {
+    transform: translateX(0%);
+  }
+  
+  #aboutmePic.slideOut {
+    transform: translateX(100%);
+  }
+  
+  #services {
+    transition: transform 400ms ease-in;
+    
+    color: white;
+    width: 50%;
+    height: 100%;
+    background-color: #FFC000;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #services.slideIn {
+    transform: translateX(100%);
+  }
+  
+  #services.slideOut {
+    transform: translateX(200%);
+  }
+  
+  #portfolio {
+    transition: transform 400ms ease-in;
+    
+    color: black;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  #portfolio.slideIn {
+    transform: translateX(0);
+  }
+  
+  #portfolio.slideOut {
+    transform: translateX(-100%);
+  }
+
+  .comm, .short, .photo {
+    width: 48%;
+    display: inline-block;
   }
   
   #contact {
@@ -652,8 +905,15 @@ and (min-width : 1224px) {
     overflow: hidden;
     width: 300px;
   }
-  /* End Desktop */
-}
+
+  #emailModal {  
+    left: 30%;
+    right: 30%;
+    top: 20%;
+    bottom: 20%;
+  }
+  
+}/* End Desktop */
 
 /* Large screens ----------- 
 @media only screen 

@@ -40,6 +40,7 @@ function aboutmeOpen(){
     document.getElementById('aboutmePic').classList.replace('slideOut','slideIn');
     document.getElementById('services').classList.replace('slideIn','slideOut');
     document.getElementById('portfolio').classList.replace('slideIn','slideOut');
+    document.getElementById('homepageContainer').classList.replace('slideRightLg','slideLeft');
 }
 
 function servicesOpen(){
@@ -71,7 +72,7 @@ function filter(which){
         comm.forEach((element,index) => {
             console.log(index);
             console.log(element);
-            element.style.display = 'inherit';
+            element.style.display = 'inline-block';
         });
 
         document.getElementById('filterShort').classList.remove('active');
@@ -79,7 +80,7 @@ function filter(which){
         short.forEach((element,index) => {
             console.log(index);
             console.log(element);
-            element.style.display = 'inherit';
+            element.style.display = 'inline-block';
         });
 
         document.getElementById('filterPhoto').classList.remove('active');
@@ -87,7 +88,7 @@ function filter(which){
         photo.forEach((element,index) => {
             console.log(index);
             console.log(element);
-            element.style.display = 'inherit';
+            element.style.display = 'inline-block';
         });
 
     } else if(which === 'comm'){
@@ -122,7 +123,7 @@ function filter(which){
             comm.forEach((element,index) => {
                 console.log(index);
                 console.log(element);
-                element.style.display = 'inherit';
+                element.style.display = 'inline-block';
             });
         }
         
@@ -158,7 +159,7 @@ function filter(which){
             short.forEach((element,index) => {
                 console.log(index);
                 console.log(element);
-                element.style.display = 'inherit';
+                element.style.display = 'inline-block';
             });
         }
     } else if(which === 'photo'){
@@ -193,8 +194,28 @@ function filter(which){
             photo.forEach((element,index) => {
                 console.log(index);
                 console.log(element);
-                element.style.display = 'inherit';
+                element.style.display = 'inline-block';
             });
         }
     }
 }
+
+/*function showEmailModal(){
+    alert('show email modal');
+    document.getElementById('emailModal').style.display = "block";
+    document.getElementById('App').style.opacity = 0.25;
+}
+
+var box = document.querySelector("#emailModal");
+// Detect all clicks on the document
+document.addEventListener("click", function(event) {
+	// If user clicks inside the element, do nothing
+	if (event.target.closest("#emailModal")) return;
+    // If user clicks outside the element, hide it!
+    alert("before if");
+    if(box.style.display === "block"){
+        alert("inside if");
+        box.style.display = "none";
+        document.getElementById('App').style.opacity = 1;
+    }
+});*/
