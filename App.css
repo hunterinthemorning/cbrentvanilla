@@ -511,6 +511,10 @@ and (orientation : landscape) {
     width: 48%;
     display: inline-block;
   }
+
+  .modal {
+    overflow-y: scroll;
+  }
 }
 
 /* Smartphones (portrait) -----------
@@ -526,6 +530,7 @@ and (max-width : 375px) {
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 768px) 
+/*and (min-device-width : 813px)*/
 and (max-device-width : 1024px) {
   #homepage {
     transition: transform 400ms ease-in;
@@ -554,7 +559,7 @@ and (max-device-width : 1024px) {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 75%;
+    bottom: 72%;
     left: 0;
     z-index: 1;
   }
@@ -572,7 +577,7 @@ and (max-device-width : 1024px) {
     background-repeat: no-repeat;
     transition: transform 400ms ease-in;
     position: absolute;
-    top: 25%;
+    top: 28%;
     right: 0;
     bottom: 25%;
     left: 0;
@@ -607,6 +612,8 @@ and (max-device-width : 1024px) {
   #services.slideOut {
     transform: translateX(100%);
   }
+  
+  
   
   #portfolio {
     transition: transform 400ms ease-in;
@@ -654,7 +661,8 @@ and (max-device-width : 1024px) {
 
 /* iPads (landscape) ----------- */
 @media only screen 
-and (min-device-width : 768px) 
+and (min-device-width : 768px)
+/*and (min-device-width : 813px)  */
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
   #aboutme {
@@ -800,9 +808,19 @@ and (orientation : landscape) {
 /* iPads (portrait) ----------- */
 @media only screen 
 and (min-device-width : 768px) 
+/*and (min-device-width : 813px) */
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
   
+}
+
+/* iPad X (portrait and landscape) ----------- */
+@media only screen 
+and (device-width : 1024px)
+and (orientation : portrait) {
+  #homepage {
+    top: 83%;
+  }
 }
 
 /* Desktops and laptops ----------- */
@@ -868,6 +886,25 @@ and (min-width : 1224px) {
   
   #services.slideOut {
     transform: translateX(200%);
+  }
+  
+  #servicesPic {
+    background-image: url(deadpool.jpg);
+    background-size: cover;
+    transition: transform 400ms ease-in;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #servicesPic.slideIn {
+    transform: translateX(0%);
+  }
+  
+  #servicesPic.slideOut {
+    transform: translateX(-100%);
   }
   
   #portfolio {

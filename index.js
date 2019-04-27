@@ -30,6 +30,7 @@ if(typeof nameBox !== 'undefined' && nameBox !== null && typeof navmenu !== 'und
 function whichClose(which){
     document.getElementById(which).classList.replace('slideIn','slideOut');
     document.getElementById('aboutmePic').classList.replace('slideIn','slideOut');
+    document.getElementById('servicesPic').classList.replace('slideIn','slideOut');
     document.getElementById('homepageContainer').classList.replace('slideRightLg','slideLeft');
     document.getElementById('homepageContainer').classList.replace('slideRightSm','slideLeft');
     document.getElementById('homepageContainer').classList.replace('slideRightXSm','slideLeft');
@@ -39,6 +40,7 @@ function aboutmeOpen(){
     document.getElementById('aboutme').classList.replace('slideOut','slideIn');
     document.getElementById('aboutmePic').classList.replace('slideOut','slideIn');
     document.getElementById('services').classList.replace('slideIn','slideOut');
+    document.getElementById('servicesPic').classList.replace('slideIn','slideOut');
     document.getElementById('portfolio').classList.replace('slideIn','slideOut');
     document.getElementById('homepageContainer').classList.replace('slideRightLg','slideLeft');
 }
@@ -47,6 +49,7 @@ function servicesOpen(){
     document.getElementById('aboutme').classList.replace('slideIn','slideOut');
     document.getElementById('aboutmePic').classList.replace('slideIn','slideOut');
     document.getElementById('services').classList.replace('slideOut','slideIn');
+    document.getElementById('servicesPic').classList.replace('slideOut','slideIn');
     document.getElementById('portfolio').classList.replace('slideIn','slideOut');
     document.getElementById('homepageContainer').classList.replace('slideleft','slideRightXSm');
     document.getElementById('homepageContainer').classList.replace('slideRightLg','slideRightXSm');
@@ -57,6 +60,7 @@ function portfolioOpen(){
     document.getElementById('aboutme').classList.replace('slideIn','slideOut');
     document.getElementById('aboutmePic').classList.replace('slideIn','slideOut');
     document.getElementById('services').classList.replace('slideIn','slideOut');
+    document.getElementById('servicesPic').classList.replace('slideIn','slideOut');
     document.getElementById('portfolio').classList.replace('slideOut','slideIn');
     document.getElementById('homepageContainer').classList.replace('slideLeft','slideRightLg');
     document.getElementById('homepageContainer').classList.replace('slideRightSm','slideRightLg');
@@ -211,8 +215,9 @@ function closeEmailModal(){
 }
 
 function emailMessage(){
-    var email = document.getElementById('emailAddress').innerHTML;
-    var message = document.getElementById('emailMessage').innerHTML;
+    alert("in email");
+    /*var email = document.getElementById('emailAddress').value;
+    var message = document.getElementById('emailMessage').value;
     var ajax = new XMLHttpRequest();
     ajax.open("POST", 'email.php', true);
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -222,5 +227,17 @@ function emailMessage(){
             alert("here");
         }
     }
-    ajax.send("email=test&message=testing message");
+    ajax.send("email=test&message=testing message");*/
+    var name = $('#emailName').val();
+    var email = $('#emailAddress').val();
+    var message = $('#emailMessage').val();
+    var dataString = 'name='+name+'&email='+email+'&message='+message;
+    $.ajax({
+        type:"POST",
+        url:"email.php",
+        data:dataString,
+        success:function(e){
+            alert('success!');
+        }
+    });
 }
