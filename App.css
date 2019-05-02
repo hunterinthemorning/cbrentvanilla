@@ -31,7 +31,7 @@
 }
 
 #aboutmeContents {
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 4rem 1rem 2rem 1rem;
   height: 100%;
 }
 
@@ -40,7 +40,7 @@
 }
 
 #servicesContents {
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 4rem 1rem 2rem 1rem;
 }
 
 #servicesContents h2 {
@@ -48,7 +48,7 @@
 }
 
 #portfolioContents {
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 4rem 1rem 2rem 1rem;
   height: 100%;
 }
 
@@ -61,7 +61,7 @@
 }
 
 #contactContents {
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 4rem 1rem 2rem 1rem;
   text-align: center;
   display: grid;
 }
@@ -258,6 +258,17 @@ button.active {
 .closeButton {
   position: absolute;
   right: 2rem;
+  top: 1rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  z-index: 2;
+}
+
+.sidenav {
+  position: absolute;
+  left: 2rem;
   top: 1rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
@@ -911,11 +922,13 @@ and (min-width : 1224px) {
     transition: transform 400ms ease-in;
     
     color: black;
-    width: 50%;
-    height: 100%;
     background-color: white;
   
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
   }
   

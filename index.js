@@ -62,9 +62,12 @@ function portfolioOpen(){
     document.getElementById('services').classList.replace('slideIn','slideOut');
     document.getElementById('servicesPic').classList.replace('slideIn','slideOut');
     document.getElementById('portfolio').classList.replace('slideOut','slideIn');
-    document.getElementById('homepageContainer').classList.replace('slideLeft','slideRightLg');
+    /*document.getElementById('homepageContainer').classList.replace('slideLeft','slideRightLg');
     document.getElementById('homepageContainer').classList.replace('slideRightSm','slideRightLg');
-    document.getElementById('homepageContainer').classList.replace('slideRightXSm','slideRightLg');
+    document.getElementById('homepageContainer').classList.replace('slideRightXSm','slideRightLg');*/
+    document.getElementById('homepageContainer').classList.replace('slideRightLg','slideLeft');
+    document.getElementById('homepageContainer').classList.replace('slideRightSm','slideLeft');
+    document.getElementById('homepageContainer').classList.replace('slideRightXSm','slideLeft');
 }
 
 function filter(which){
