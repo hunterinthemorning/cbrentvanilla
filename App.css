@@ -55,8 +55,8 @@
 
 #portfolioContents {
   /*padding: 4rem 1rem 2rem 1rem;
-  height: 100%;*/
-  padding-left: 1rem;
+  height: 100%;
+  padding-left: 1rem;*/
   position: absolute;
   bottom: 0;
   top: 4rem;
@@ -69,6 +69,10 @@
 #portfolioContents h2 {
   text-align: center;
 }
+
+#pMedia {
+  text-align: center;
+ }
 
 #contactContents {
   /*padding: 4rem 1rem 2rem 1rem;*/
@@ -148,7 +152,8 @@
 }
 
 #navmenu.slideUp {
-  transform: translateY(-120%);
+  /*transform: translateY(-120%); */
+  transform: translateY(-150%);
 }
 
 #navmenu ul {
@@ -467,6 +472,12 @@ and (max-device-width : 480px) {
   #portfolio #portfolioContents.row {
     padding-bottom: 1rem;
   }
+
+  .comm, .short, .photo {
+    margin-bottom: 1rem;
+    border: 2px solid black;
+  }
+
 }
 
 /* Smartphones (landscape) ----------- */
@@ -549,6 +560,8 @@ and (orientation : landscape) {
   .comm, .short, .photo {
     width: 48%;
     display: inline-block;
+    margin-bottom: 1rem;
+    border: 2px solid black;
   }
 
   .modal {
@@ -572,6 +585,12 @@ and (device-width : 320px) {
   .media iframe {
     height: 160px;
   }
+
+  .comm, .short, .photo {
+    margin-bottom: 1rem;
+    border: 2px solid black;
+  }
+
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -692,6 +711,9 @@ and (max-device-width : 1024px) {
   .comm, .short, .photo {
     width: 48%;
     display: inline-block;
+    border: 2px solid black;
+    margin-bottom: 1rem;
+
   }
 
   #homepageContainer.slideRightLg {
@@ -803,6 +825,11 @@ and (orientation : landscape) {
   #portfolio.slideOut {
     transform: translateX(-100%);
   }
+
+  .comm, .short, .photo {
+    border: 2px solid black;
+    margin-bottom: 1rem;
+  }
   
   #contact {
     transition: transform 400ms ease-in;
@@ -873,6 +900,21 @@ and (orientation : portrait) {
   
 }
 
+/* iPad Pro (portrait and landscape) -------- */
+@media only screen
+and (min-device-width : 834px)
+and (max-device-width : 1336px)
+and (orientation : landscape) {
+  .comm, .short, .photo {
+    border: 2px solid black;
+    margin-bottom: 1rem;
+  }
+
+  .media iframe {
+    height: 380px;
+  }
+}
+
 /* iPad X (portrait and landscape) ----------- */
 @media only screen 
 and (device-width : 1024px)
@@ -884,7 +926,7 @@ and (orientation : portrait) {
 
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 1337px) {
   /* Start Desktop */
   #aboutme {
     transition: transform 400ms ease-in;
@@ -1000,9 +1042,9 @@ and (min-width : 1224px) {
     color: white;
   }
 
-  #pMedia {
+  /*#pMedia {
     text-align: center;
-  }
+  }*/
 
   .media iframe {
     height: 380px;
